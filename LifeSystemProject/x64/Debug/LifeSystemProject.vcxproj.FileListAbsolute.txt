@@ -1,0 +1,3 @@
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\x64\Debug\LifeSystemProject.vcxproj.AssemblyReference.cache
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\x64\Debug\LifeSystemProject.MyForm.resources
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\x64\Debug\LifeSystemProject.vcxproj.GenerateResource.cache

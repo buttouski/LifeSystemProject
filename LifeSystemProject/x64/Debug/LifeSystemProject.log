@@ -1,1 +1,3 @@
-﻿  LifeSystemProject.vcxproj -> C:\Users\aliya\source\repos\LifeSystemProject\x64\Debug\LifeSystemProject.exe
+﻿  MyForm.cpp
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  LifeSystemProject.vcxproj -> C:\Users\aliya\source\repos\LifeSystemProject\x64\Debug\LifeSystemProject.exe

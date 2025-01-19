@@ -2,6 +2,8 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace System::Drawing;
+
 
 [STAThreadAttribute]
 int main(array<String^>^ args) {

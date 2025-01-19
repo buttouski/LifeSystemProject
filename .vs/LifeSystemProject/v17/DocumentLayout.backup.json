@@ -22,24 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MyForm.cpp",
-              "DocumentMoniker": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp",
-              "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.cpp",
-              "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp",
-              "RelativeToolTip": "LifeSystemProject\\MyForm.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-19T12:24:41.952Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -50,8 +37,21 @@
               "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-19T12:13:38.626Z",
+              "WhenOpened": "2025-01-19T16:20:56.596Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyForm.cpp",
+              "DocumentMoniker": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp",
+              "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.cpp",
+              "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp",
+              "RelativeToolTip": "LifeSystemProject\\MyForm.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-19T12:24:41.952Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

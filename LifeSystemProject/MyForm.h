@@ -20,15 +20,14 @@ namespace LifeSystemProject {
 		MyForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
-			timer->Enabled = true;
 			
-			chart1->ChartAreas[0]->AxisY->Maximum = 50;
-			chart1->ChartAreas[0]->AxisY->Minimum = 0;
-
+			timer->Enabled = true;
 			DateTime now = DateTime::Now;
+			
+			//chart1 brain activity settings
+			chart1->ChartAreas[0]->AxisY->Maximum = 50;
+			chart1->ChartAreas[0]->AxisY->Minimum = -5;
+
 			chart1->ChartAreas[0]->AxisX->LabelStyle->Format = "H:mm:ss";
 			chart1->Series[0]->XValueType = ChartValueType::DateTime;
 
@@ -36,13 +35,36 @@ namespace LifeSystemProject {
 			chart1->ChartAreas[0]->AxisX->Maximum = now.AddMinutes(1).ToOADate();
 
 			chart1->ChartAreas[0]->AxisX->IntervalType = DateTimeIntervalType::Seconds;
-			chart1->ChartAreas[0]->AxisX->Interval = 5;
+			chart1->ChartAreas[0]->AxisX->Interval = 8;
+
+			//chart1 chss 
+			chart1->Series[1]->XValueType = ChartValueType::DateTime;
+
+			//chart1 Pulse 
+			chart1->Series[2]->XValueType = ChartValueType::DateTime;
+
+			//chart1 Breathe 
+			chart1->Series[3]->XValueType = ChartValueType::DateTime;
 		}
 	
 	
 	private:
 		int _countSeconds = 0;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::SplitContainer^ splitContainer1;
+	private: System::Windows::Forms::CheckBox^ checkBoxBreath;
+	private: System::Windows::Forms::CheckBox^ checkBoxPulse;
+	private: System::Windows::Forms::CheckBox^ checkBoxCHSS;
+	private: System::Windows::Forms::CheckBox^ checkBoxbrain;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+
+
+
+
+
+
+
 		   int limitTemp = 35;
 
 
@@ -57,14 +79,16 @@ namespace LifeSystemProject {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::GroupBox^ groupBox1;
+
 	protected:
-	private: System::Windows::Forms::SplitContainer^ splitContainer1;
-	private: System::Windows::Forms::CheckBox^ checkBox4;
-	private: System::Windows::Forms::CheckBox^ checkBox3;
-	private: System::Windows::Forms::CheckBox^ checkBox2;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Timer^ timer;
 	private: System::ComponentModel::IContainer^ components;
 
@@ -95,51 +119,52 @@ namespace LifeSystemProject {
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->groupBox1->SuspendLayout();
+			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->checkBoxbrain = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBoxCHSS = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBoxPulse = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBoxBreath = (gcnew System::Windows::Forms::CheckBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
-			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// groupBox1
+			// timer
 			// 
-			this->groupBox1->Controls->Add(this->splitContainer1);
-			this->groupBox1->Location = System::Drawing::Point(18, 15);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1010, 283);
-			this->groupBox1->TabIndex = 0;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Показатели";
+			this->timer->Interval = 1000;
+			this->timer->Tick += gcnew System::EventHandler(this, &MyForm::timer_Tick);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(40, 319);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(44, 16);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"label1";
 			// 
 			// splitContainer1
 			// 
+			this->splitContainer1->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->splitContainer1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->splitContainer1->Location = System::Drawing::Point(3, 18);
 			this->splitContainer1->Name = L"splitContainer1";
 			// 
 			// splitContainer1.Panel1
 			// 
+			this->splitContainer1->Panel1->Controls->Add(this->checkBoxBreath);
+			this->splitContainer1->Panel1->Controls->Add(this->checkBoxPulse);
+			this->splitContainer1->Panel1->Controls->Add(this->checkBoxCHSS);
+			this->splitContainer1->Panel1->Controls->Add(this->checkBoxbrain);
 			this->splitContainer1->Panel1->Controls->Add(this->chart1);
-			// 
-			// splitContainer1.Panel2
-			// 
-			this->splitContainer1->Panel2->Controls->Add(this->checkBox4);
-			this->splitContainer1->Panel2->Controls->Add(this->checkBox3);
-			this->splitContainer1->Panel2->Controls->Add(this->checkBox2);
-			this->splitContainer1->Panel2->Controls->Add(this->checkBox1);
 			this->splitContainer1->Size = System::Drawing::Size(1004, 262);
-			this->splitContainer1->SplitterDistance = 815;
+			this->splitContainer1->SplitterDistance = 969;
 			this->splitContainer1->TabIndex = 0;
 			// 
 			// chart1
@@ -149,7 +174,7 @@ namespace LifeSystemProject {
 			this->chart1->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
 			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(29, 13);
+			this->chart1->Location = System::Drawing::Point(15, 13);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::None;
 			series1->ChartArea = L"ChartArea1";
@@ -168,6 +193,7 @@ namespace LifeSystemProject {
 			series3->Color = System::Drawing::Color::Gold;
 			series3->Legend = L"Legend1";
 			series3->MarkerBorderWidth = 3;
+			series3->MarkerStep = 20;
 			series3->Name = L"Пульс";
 			series4->ChartArea = L"ChartArea1";
 			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
@@ -182,65 +208,71 @@ namespace LifeSystemProject {
 			this->chart1->Series->Add(series2);
 			this->chart1->Series->Add(series3);
 			this->chart1->Series->Add(series4);
-			this->chart1->Size = System::Drawing::Size(771, 234);
+			this->chart1->Size = System::Drawing::Size(920, 234);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
 			this->chart1->Click += gcnew System::EventHandler(this, &MyForm::chart1_Click);
 			// 
-			// checkBox4
+			// checkBoxbrain
 			// 
-			this->checkBox4->AutoSize = true;
-			this->checkBox4->Location = System::Drawing::Point(38, 155);
-			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(95, 20);
-			this->checkBox4->TabIndex = 3;
-			this->checkBox4->Text = L"checkBox4";
-			this->checkBox4->UseVisualStyleBackColor = true;
+			this->checkBoxbrain->AutoSize = true;
+			this->checkBoxbrain->BackColor = System::Drawing::Color::LightCyan;
+			this->checkBoxbrain->Checked = true;
+			this->checkBoxbrain->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBoxbrain->Location = System::Drawing::Point(776, 125);
+			this->checkBoxbrain->Name = L"checkBoxbrain";
+			this->checkBoxbrain->Size = System::Drawing::Size(147, 20);
+			this->checkBoxbrain->TabIndex = 1;
+			this->checkBoxbrain->Text = L"Активность мозга";
+			this->checkBoxbrain->UseVisualStyleBackColor = false;
+			this->checkBoxbrain->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBoxbrain_CheckedChanged);
 			// 
-			// checkBox3
+			// checkBoxCHSS
 			// 
-			this->checkBox3->AutoSize = true;
-			this->checkBox3->Location = System::Drawing::Point(38, 112);
-			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(95, 20);
-			this->checkBox3->TabIndex = 2;
-			this->checkBox3->Text = L"checkBox3";
-			this->checkBox3->UseVisualStyleBackColor = true;
+			this->checkBoxCHSS->AutoSize = true;
+			this->checkBoxCHSS->BackColor = System::Drawing::Color::LightPink;
+			this->checkBoxCHSS->Location = System::Drawing::Point(776, 152);
+			this->checkBoxCHSS->Name = L"checkBoxCHSS";
+			this->checkBoxCHSS->Size = System::Drawing::Size(56, 20);
+			this->checkBoxCHSS->TabIndex = 2;
+			this->checkBoxCHSS->Text = L"ЧСС";
+			this->checkBoxCHSS->UseVisualStyleBackColor = false;
+			this->checkBoxCHSS->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBoxCHSS_CheckedChanged);
 			// 
-			// checkBox2
+			// checkBoxPulse
 			// 
-			this->checkBox2->AutoSize = true;
-			this->checkBox2->Location = System::Drawing::Point(38, 66);
-			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(95, 20);
-			this->checkBox2->TabIndex = 1;
-			this->checkBox2->Text = L"checkBox2";
-			this->checkBox2->UseVisualStyleBackColor = true;
+			this->checkBoxPulse->AutoSize = true;
+			this->checkBoxPulse->BackColor = System::Drawing::Color::NavajoWhite;
+			this->checkBoxPulse->Location = System::Drawing::Point(776, 179);
+			this->checkBoxPulse->Name = L"checkBoxPulse";
+			this->checkBoxPulse->Size = System::Drawing::Size(69, 20);
+			this->checkBoxPulse->TabIndex = 3;
+			this->checkBoxPulse->Text = L"Пульс";
+			this->checkBoxPulse->UseVisualStyleBackColor = false;
+			this->checkBoxPulse->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBoxPulse_CheckedChanged);
 			// 
-			// checkBox1
+			// checkBoxBreath
 			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->Location = System::Drawing::Point(38, 24);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(95, 20);
-			this->checkBox1->TabIndex = 0;
-			this->checkBox1->Text = L"checkBox1";
-			this->checkBox1->UseVisualStyleBackColor = true;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
+			this->checkBoxBreath->AutoSize = true;
+			this->checkBoxBreath->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->checkBoxBreath->Location = System::Drawing::Point(776, 206);
+			this->checkBoxBreath->Name = L"checkBoxBreath";
+			this->checkBoxBreath->Size = System::Drawing::Size(85, 20);
+			this->checkBoxBreath->TabIndex = 4;
+			this->checkBoxBreath->Text = L"Дыхание";
+			this->checkBoxBreath->UseVisualStyleBackColor = false;
+			this->checkBoxBreath->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBoxBreath_CheckedChanged);
 			// 
-			// timer
+			// groupBox1
 			// 
-			this->timer->Interval = 1000;
-			this->timer->Tick += gcnew System::EventHandler(this, &MyForm::timer_Tick);
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(40, 319);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(44, 16);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"label1";
+			this->groupBox1->Controls->Add(this->splitContainer1);
+			this->groupBox1->Location = System::Drawing::Point(18, 15);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(1010, 283);
+			this->groupBox1->TabIndex = 0;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Показатели";
 			// 
 			// MyForm
 			// 
@@ -254,30 +286,78 @@ namespace LifeSystemProject {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"MyForm";
 			this->Text = L"Система жизнеобспечения";
-			this->groupBox1->ResumeLayout(false);
 			this->splitContainer1->Panel1->ResumeLayout(false);
-			this->splitContainer1->Panel2->ResumeLayout(false);
-			this->splitContainer1->Panel2->PerformLayout();
+			this->splitContainer1->Panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+			this->groupBox1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+		private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
+		}
 
-	}
-	private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void timer_Tick(System::Object^ sender, System::EventArgs^ e) {
-		DateTime timeNow = DateTime::Now;
-		int value = 10;
+		private: DateTime timeNow; // Поле для хранения текущего времени
 
-		this->chart1->Series[0]->Points->AddXY(timeNow, value);
-	}
+		private: System::Void timer_Tick(System::Object^ sender, System::EventArgs^ e) {
+			timeNow = DateTime::Now; // Обновляем текущее время на каждом тик таймера
+			Random^ random = gcnew Random(timeNow.Millisecond);
+			double randomBrain = random->Next(0, 41);
+			double randomCHSS = random->Next(0, 30);
+			double randomPulse = random->Next(30, 40);
+			double randomBreath = random->Next(0, 25);
 
+			// Проверяем состояние чекбокса перед добавлением данных
+			if (this->checkBoxbrain->Checked) {
+				this->chart1->Series[0]->Points->AddXY(timeNow, randomBrain);
+			}
+			if (this->checkBoxCHSS->Checked) {
+				this->chart1->Series[1]->Points->AddXY(timeNow, randomCHSS);
+			}
+			if (this->checkBoxPulse->Checked) {
+				this->chart1->Series[2]->Points->AddXY(timeNow, randomPulse);
+			}
+			if (this->checkBoxBreath->Checked) {
+				this->chart1->Series[3]->Points->AddXY(timeNow, randomBreath);
+			}
+
+
+			_countSeconds++;
+			if (_countSeconds == 60) {
+				_countSeconds = 0;
+
+				chart1->ChartAreas[0]->AxisX->Minimum = timeNow.ToOADate();
+				chart1->ChartAreas[0]->AxisX->Maximum = timeNow.AddMinutes(1).ToOADate();
+
+				chart1->ChartAreas[0]->AxisX->IntervalType = DateTimeIntervalType::Seconds;
+				chart1->ChartAreas[0]->AxisX->Interval = 5;
+			}
+		}
+
+		// Очищаем данные, если чекбокс не отмечен
+		private: System::Void checkBoxbrain_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+			if (!this->checkBoxbrain->Checked) {
+				this->chart1->Series[0]->Points->Clear();
+			}
+		}
+		private: System::Void checkBoxCHSS_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+			if (!this->checkBoxCHSS->Checked) {
+				this->chart1->Series[1]->Points->Clear();
+			}
+		}
+		private: System::Void checkBoxPulse_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+			if (!this->checkBoxPulse->Checked) {
+				this->chart1->Series[2]->Points->Clear();
+			}
+		}
+		private: System::Void checkBoxBreath_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+			if (!this->checkBoxBreath->Checked) {
+				this->chart1->Series[3]->Points->Clear(); 
+			}
+		}
 };
 }

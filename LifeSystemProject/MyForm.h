@@ -47,9 +47,6 @@ namespace LifeSystemProject {
 			chart1->Series[3]->XValueType = ChartValueType::DateTime;
 		}
 	
-	
-	private:
-		int _countSeconds = 0;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::SplitContainer^ splitContainer1;
 	private: System::Windows::Forms::CheckBox^ checkBoxBreath;
@@ -66,7 +63,7 @@ namespace LifeSystemProject {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Label^ label8;
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Label^ label7;
@@ -75,18 +72,27 @@ namespace LifeSystemProject {
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ kvtLabelCost;
+
+	private: System::Windows::Forms::Label^ kvtLabel;
+	private: System::Windows::Forms::Label^ oxygenLabelCost;
 
 
 
 
 
+	private: System::Windows::Forms::Label^ oxygenLabel;
+	private: System::Windows::Forms::Label^ O2LevelLabel;
+	private: System::Windows::Forms::Label^ CO2LevelLabel;
+	private: System::Windows::Forms::Label^ DiaLabel;
+
+
+	private: System::Windows::Forms::Label^ SysLabel;
 
 
 
+	private: System::Windows::Forms::Label^ label8;
 
-
-
-		   int limitTemp = 35;
 
 
 	protected:
@@ -102,12 +108,6 @@ namespace LifeSystemProject {
 		}
 
 	protected:
-
-
-
-
-
-
 
 
 	private: System::Windows::Forms::Timer^ timer;
@@ -134,12 +134,12 @@ namespace LifeSystemProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
@@ -150,19 +150,27 @@ namespace LifeSystemProject {
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->kvtLabelCost = (gcnew System::Windows::Forms::Label());
+			this->kvtLabel = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->oxygenLabelCost = (gcnew System::Windows::Forms::Label());
+			this->oxygenLabel = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->O2LevelLabel = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->CO2LevelLabel = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->DiaLabel = (gcnew System::Windows::Forms::Label());
+			this->SysLabel = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
@@ -271,48 +279,47 @@ namespace LifeSystemProject {
 			// chart1
 			// 
 			this->chart1->BorderlineColor = System::Drawing::Color::Gray;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
+			chartArea2->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			this->chart1->Legends->Add(legend2);
 			this->chart1->Location = System::Drawing::Point(15, 13);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::None;
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->Legend = L"Legend1";
-			series1->MarkerBorderWidth = 3;
-			series1->Name = L"Активность мозга";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series2->Color = System::Drawing::Color::Red;
-			series2->Legend = L"Legend1";
-			series2->MarkerBorderWidth = 3;
-			series2->Name = L"Частота сердечных\nсокращений";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series3->Color = System::Drawing::Color::Gold;
-			series3->Legend = L"Legend1";
-			series3->MarkerBorderWidth = 3;
-			series3->MarkerStep = 20;
-			series3->Name = L"Пульс";
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series4->Color = System::Drawing::Color::LimeGreen;
-			series4->LabelBorderColor = System::Drawing::Color::Transparent;
-			series4->LabelForeColor = System::Drawing::Color::MediumSeaGreen;
-			series4->Legend = L"Legend1";
-			series4->MarkerBorderWidth = 3;
-			series4->Name = L"Дыхание";
-			series4->YValuesPerPoint = 2;
-			this->chart1->Series->Add(series1);
-			this->chart1->Series->Add(series2);
-			this->chart1->Series->Add(series3);
-			this->chart1->Series->Add(series4);
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Legend = L"Legend1";
+			series5->MarkerBorderWidth = 3;
+			series5->Name = L"Активность мозга";
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series6->Color = System::Drawing::Color::Red;
+			series6->Legend = L"Legend1";
+			series6->MarkerBorderWidth = 3;
+			series6->Name = L"Частота сердечных\nсокращений";
+			series7->ChartArea = L"ChartArea1";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series7->Color = System::Drawing::Color::Gold;
+			series7->Legend = L"Legend1";
+			series7->MarkerBorderWidth = 3;
+			series7->MarkerStep = 20;
+			series7->Name = L"Пульс";
+			series8->ChartArea = L"ChartArea1";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series8->Color = System::Drawing::Color::LimeGreen;
+			series8->LabelBorderColor = System::Drawing::Color::Transparent;
+			series8->LabelForeColor = System::Drawing::Color::MediumSeaGreen;
+			series8->Legend = L"Legend1";
+			series8->MarkerBorderWidth = 3;
+			series8->Name = L"Дыхание";
+			series8->YValuesPerPoint = 2;
+			this->chart1->Series->Add(series5);
+			this->chart1->Series->Add(series6);
+			this->chart1->Series->Add(series7);
+			this->chart1->Series->Add(series8);
 			this->chart1->Size = System::Drawing::Size(1146, 364);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
-			this->chart1->Click += gcnew System::EventHandler(this, &MyForm::chart1_Click);
 			// 
 			// groupBox1
 			// 
@@ -326,6 +333,8 @@ namespace LifeSystemProject {
 			// 
 			// panel1
 			// 
+			this->panel1->Controls->Add(this->kvtLabelCost);
+			this->panel1->Controls->Add(this->kvtLabel);
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
@@ -333,6 +342,24 @@ namespace LifeSystemProject {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(322, 131);
 			this->panel1->TabIndex = 2;
+			// 
+			// kvtLabelCost
+			// 
+			this->kvtLabelCost->AutoSize = true;
+			this->kvtLabelCost->Location = System::Drawing::Point(65, 92);
+			this->kvtLabelCost->Name = L"kvtLabelCost";
+			this->kvtLabelCost->Size = System::Drawing::Size(14, 16);
+			this->kvtLabelCost->TabIndex = 5;
+			this->kvtLabelCost->Text = L"0";
+			// 
+			// kvtLabel
+			// 
+			this->kvtLabel->AutoSize = true;
+			this->kvtLabel->Location = System::Drawing::Point(65, 58);
+			this->kvtLabel->Name = L"kvtLabel";
+			this->kvtLabel->Size = System::Drawing::Size(14, 16);
+			this->kvtLabel->TabIndex = 4;
+			this->kvtLabel->Text = L"0";
 			// 
 			// label3
 			// 
@@ -354,6 +381,8 @@ namespace LifeSystemProject {
 			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->oxygenLabelCost);
+			this->panel2->Controls->Add(this->oxygenLabel);
 			this->panel2->Controls->Add(this->label4);
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->label6);
@@ -361,6 +390,24 @@ namespace LifeSystemProject {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(337, 131);
 			this->panel2->TabIndex = 4;
+			// 
+			// oxygenLabelCost
+			// 
+			this->oxygenLabelCost->AutoSize = true;
+			this->oxygenLabelCost->Location = System::Drawing::Point(56, 92);
+			this->oxygenLabelCost->Name = L"oxygenLabelCost";
+			this->oxygenLabelCost->Size = System::Drawing::Size(14, 16);
+			this->oxygenLabelCost->TabIndex = 5;
+			this->oxygenLabelCost->Text = L"0";
+			// 
+			// oxygenLabel
+			// 
+			this->oxygenLabel->AutoSize = true;
+			this->oxygenLabel->Location = System::Drawing::Point(78, 57);
+			this->oxygenLabel->Name = L"oxygenLabel";
+			this->oxygenLabel->Size = System::Drawing::Size(14, 16);
+			this->oxygenLabel->TabIndex = 4;
+			this->oxygenLabel->Text = L"0";
 			// 
 			// label4
 			// 
@@ -392,6 +439,7 @@ namespace LifeSystemProject {
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->O2LevelLabel);
 			this->panel3->Controls->Add(this->label8);
 			this->panel3->Controls->Add(this->label9);
 			this->panel3->Location = System::Drawing::Point(705, 456);
@@ -399,15 +447,23 @@ namespace LifeSystemProject {
 			this->panel3->Size = System::Drawing::Size(212, 60);
 			this->panel3->TabIndex = 5;
 			// 
+			// O2LevelLabel
+			// 
+			this->O2LevelLabel->AutoSize = true;
+			this->O2LevelLabel->Location = System::Drawing::Point(34, 33);
+			this->O2LevelLabel->Name = L"O2LevelLabel";
+			this->O2LevelLabel->Size = System::Drawing::Size(14, 16);
+			this->O2LevelLabel->TabIndex = 4;
+			this->O2LevelLabel->Text = L"0";
+			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(12, 36);
+			this->label8->Location = System::Drawing::Point(12, 32);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(22, 16);
-			this->label8->TabIndex = 2;
+			this->label8->TabIndex = 3;
 			this->label8->Text = L"%:";
-			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
 			// 
 			// label9
 			// 
@@ -421,12 +477,22 @@ namespace LifeSystemProject {
 			// 
 			// panel4
 			// 
+			this->panel4->Controls->Add(this->CO2LevelLabel);
 			this->panel4->Controls->Add(this->label7);
 			this->panel4->Controls->Add(this->label10);
 			this->panel4->Location = System::Drawing::Point(705, 522);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(212, 65);
 			this->panel4->TabIndex = 6;
+			// 
+			// CO2LevelLabel
+			// 
+			this->CO2LevelLabel->AutoSize = true;
+			this->CO2LevelLabel->Location = System::Drawing::Point(36, 43);
+			this->CO2LevelLabel->Name = L"CO2LevelLabel";
+			this->CO2LevelLabel->Size = System::Drawing::Size(14, 16);
+			this->CO2LevelLabel->TabIndex = 3;
+			this->CO2LevelLabel->Text = L"0";
 			// 
 			// label7
 			// 
@@ -448,6 +514,8 @@ namespace LifeSystemProject {
 			// 
 			// panel5
 			// 
+			this->panel5->Controls->Add(this->DiaLabel);
+			this->panel5->Controls->Add(this->SysLabel);
 			this->panel5->Controls->Add(this->label11);
 			this->panel5->Controls->Add(this->label12);
 			this->panel5->Controls->Add(this->label13);
@@ -455,6 +523,24 @@ namespace LifeSystemProject {
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(222, 131);
 			this->panel5->TabIndex = 5;
+			// 
+			// DiaLabel
+			// 
+			this->DiaLabel->AutoSize = true;
+			this->DiaLabel->Location = System::Drawing::Point(159, 92);
+			this->DiaLabel->Name = L"DiaLabel";
+			this->DiaLabel->Size = System::Drawing::Size(14, 16);
+			this->DiaLabel->TabIndex = 5;
+			this->DiaLabel->Text = L"0";
+			// 
+			// SysLabel
+			// 
+			this->SysLabel->AutoSize = true;
+			this->SysLabel->Location = System::Drawing::Point(158, 57);
+			this->SysLabel->Name = L"SysLabel";
+			this->SysLabel->Size = System::Drawing::Size(14, 16);
+			this->SysLabel->TabIndex = 4;
+			this->SysLabel->Text = L"0";
 			// 
 			// label11
 			// 
@@ -470,9 +556,9 @@ namespace LifeSystemProject {
 			this->label12->AutoSize = true;
 			this->label12->Location = System::Drawing::Point(15, 57);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(129, 16);
+			this->label12->Size = System::Drawing::Size(132, 16);
 			this->label12->TabIndex = 2;
-			this->label12->Text = L"Систолическое АД";
+			this->label12->Text = L"Систолическое АД:";
 			// 
 			// label13
 			// 
@@ -520,9 +606,15 @@ namespace LifeSystemProject {
 
 		}
 #pragma endregion
-		private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		private: double _countSeconds = 0; // секунды для показателей
+		private: double _countSecondsIndicators = 0; // секунды для индикаторов
 
-		}
+		private: double _countKvt; // кВт
+		private: double _countKvtCost = 0; // кВт в рублях
+
+		private: double _countOxygen = 0; // o2
+		private: double _countOxygenCost = 0; // o2 в рублях
 
 		private: DateTime timeNow; // Поле для хранения текущего времени
 
@@ -551,6 +643,8 @@ namespace LifeSystemProject {
 
 
 			_countSeconds++;
+			_countSecondsIndicators++;
+
 			if (_countSeconds == 60) {
 				_countSeconds = 0;
 
@@ -559,6 +653,28 @@ namespace LifeSystemProject {
 
 				chart1->ChartAreas[0]->AxisX->IntervalType = DateTimeIntervalType::Seconds;
 				chart1->ChartAreas[0]->AxisX->Interval = 5;
+			}
+
+			if (_countSecondsIndicators == 1) {
+				_countSecondsIndicators = 0;
+				_countKvt += 0.0025;
+				_countKvtCost += 0.25;
+
+				_countOxygen += 12.5;
+				_countOxygenCost += 0.295;
+
+				this->kvtLabel->Text = System::Convert::ToString(_countKvt);
+				this->kvtLabelCost->Text = System::Convert::ToString(_countKvtCost);
+
+				this->oxygenLabel->Text = System::Convert::ToString(System::Math::Round(_countOxygen, 1));
+				this->oxygenLabelCost->Text = System::Convert::ToString(System::Math::Round(_countOxygenCost, 1));
+
+				this->O2LevelLabel->Text = System::Convert::ToString(System::Math::Round(SimulateO2Level(random), 1));
+				this->CO2LevelLabel->Text = System::Convert::ToString(System::Math::Round(SimulateCO2Level(random), 1));
+
+				this->SysLabel->Text = System::Convert::ToString(System::Math::Round(SimulateSys(random), 1));
+				this->DiaLabel->Text = System::Convert::ToString(System::Math::Round(SimulateDia(random), 1));
+
 			}
 		}
 		private:
@@ -571,15 +687,43 @@ namespace LifeSystemProject {
 
 			static double SimulateCHSS(Random^ random)
 			{
-				double baseCHSS = random->Next(12, 20);
-				double noise = random->NextDouble() * 10 - 5; 
+				double baseCHSS = random->Next(80, 90);
+				double noise = random->NextDouble() * 15 - 5; 
 				return baseCHSS + noise;
 			}
 			static double SimulateBreath(Random^ random)
 			{
 				double baseBreath = random->Next(25, 40);
-				double noise = random->NextDouble() * 20 - 0.1;
+				double noise = random->NextDouble() * 10 - 5;
 				return baseBreath + noise;
+			}
+
+
+
+			static double SimulateO2Level(Random^ random)
+			{
+				double randomO2Level = random->Next(70, 80);
+				double randomCO2Level = random->Next(3, 5);
+				double noise = random->NextDouble() * 2 - 1;
+				return randomO2Level + noise;
+			}
+			static double SimulateCO2Level(Random^ random)
+			{
+				double randomCO2Level = random->Next(3, 5);
+				double noise = random->NextDouble() * 2 - 1;
+				return randomCO2Level + noise;
+			}
+			static double SimulateSys(Random^ random)
+			{
+				double randomSys = random->Next(80, 130);
+				double noise = random->NextDouble() * 2 - 1;
+				return randomSys + noise;
+			}
+			static double SimulateDia(Random^ random)
+			{
+				double randomDia = random->Next(60, 90);
+				double noise = random->NextDouble() * 2 - 1;
+				return randomDia + noise;
 			}
 		
 
@@ -605,7 +749,6 @@ namespace LifeSystemProject {
 				this->chart1->Series[3]->Points->Clear(); 
 			}
 		}
-private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 }

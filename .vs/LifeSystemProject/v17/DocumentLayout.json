@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.h",
               "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h",
               "RelativeToolTip": "LifeSystemProject\\MyForm.h",
-              "ViewState": "AgIAAPUCAAAAAAAAAAAkwAMDAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAHkDAAAAAAAAAAAkwJMDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-19T17:49:31.354Z",
               "IsPinned": true,
@@ -55,7 +55,8 @@
               "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-24T17:31:27.294Z"
+              "WhenOpened": "2025-01-24T17:31:27.294Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
@@ -67,7 +68,8 @@
               "RelativeToolTip": "LifeSystemProject\\MyForm.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-19T17:29:09.536Z"
+              "WhenOpened": "2025-01-19T17:29:09.536Z",
+              "EditorCaption": ""
             }
           ]
         }

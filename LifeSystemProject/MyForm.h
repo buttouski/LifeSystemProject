@@ -91,6 +91,12 @@ namespace LifeSystemProject {
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label18;
 
 
 
@@ -137,15 +143,19 @@ namespace LifeSystemProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea9 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series33 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series34 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series35 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series36 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->checkBoxBreath = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBoxPulse = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBoxCHSS = (gcnew System::Windows::Forms::CheckBox());
@@ -178,7 +188,9 @@ namespace LifeSystemProject {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
@@ -216,6 +228,10 @@ namespace LifeSystemProject {
 			// 
 			// splitContainer1.Panel1
 			// 
+			this->splitContainer1->Panel1->Controls->Add(this->label18);
+			this->splitContainer1->Panel1->Controls->Add(this->label17);
+			this->splitContainer1->Panel1->Controls->Add(this->label16);
+			this->splitContainer1->Panel1->Controls->Add(this->label15);
 			this->splitContainer1->Panel1->Controls->Add(this->checkBoxBreath);
 			this->splitContainer1->Panel1->Controls->Add(this->checkBoxPulse);
 			this->splitContainer1->Panel1->Controls->Add(this->checkBoxCHSS);
@@ -224,6 +240,42 @@ namespace LifeSystemProject {
 			this->splitContainer1->Size = System::Drawing::Size(1164, 392);
 			this->splitContainer1->SplitterDistance = 1134;
 			this->splitContainer1->TabIndex = 0;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(1055, 311);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(14, 16);
+			this->label18->TabIndex = 8;
+			this->label18->Text = L"0";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(1055, 258);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(14, 16);
+			this->label17->TabIndex = 7;
+			this->label17->Text = L"0";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(1055, 283);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(14, 16);
+			this->label16->TabIndex = 6;
+			this->label16->Text = L"0";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(1055, 229);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(14, 16);
+			this->label15->TabIndex = 5;
+			this->label15->Text = L"0";
 			// 
 			// checkBoxBreath
 			// 
@@ -276,53 +328,53 @@ namespace LifeSystemProject {
 			this->checkBoxbrain->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->checkBoxbrain->Location = System::Drawing::Point(942, 229);
 			this->checkBoxbrain->Name = L"checkBoxbrain";
-			this->checkBoxbrain->Size = System::Drawing::Size(147, 20);
+			this->checkBoxbrain->Size = System::Drawing::Size(97, 20);
 			this->checkBoxbrain->TabIndex = 1;
-			this->checkBoxbrain->Text = L"Активность мозга";
+			this->checkBoxbrain->Text = L"Акт. мозга";
 			this->checkBoxbrain->UseVisualStyleBackColor = false;
 			this->checkBoxbrain->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBoxbrain_CheckedChanged);
 			// 
 			// chart1
 			// 
 			this->chart1->BorderlineColor = System::Drawing::Color::Gray;
-			chartArea9->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea9);
-			legend9->Name = L"Legend1";
-			this->chart1->Legends->Add(legend9);
+			chartArea3->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea3);
+			legend3->Name = L"Legend1";
+			this->chart1->Legends->Add(legend3);
 			this->chart1->Location = System::Drawing::Point(15, 13);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::None;
-			series33->ChartArea = L"ChartArea1";
-			series33->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series33->Legend = L"Legend1";
-			series33->MarkerBorderWidth = 3;
-			series33->Name = L"Активность мозга";
-			series34->ChartArea = L"ChartArea1";
-			series34->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series34->Color = System::Drawing::Color::Red;
-			series34->Legend = L"Legend1";
-			series34->MarkerBorderWidth = 3;
-			series34->Name = L"Частота сердечных\nсокращений";
-			series35->ChartArea = L"ChartArea1";
-			series35->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series35->Color = System::Drawing::Color::Gold;
-			series35->Legend = L"Legend1";
-			series35->MarkerBorderWidth = 3;
-			series35->MarkerStep = 20;
-			series35->Name = L"Пульс";
-			series36->ChartArea = L"ChartArea1";
-			series36->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series36->Color = System::Drawing::Color::LimeGreen;
-			series36->LabelBorderColor = System::Drawing::Color::Transparent;
-			series36->LabelForeColor = System::Drawing::Color::MediumSeaGreen;
-			series36->Legend = L"Legend1";
-			series36->MarkerBorderWidth = 3;
-			series36->Name = L"Дыхание";
-			series36->YValuesPerPoint = 2;
-			this->chart1->Series->Add(series33);
-			this->chart1->Series->Add(series34);
-			this->chart1->Series->Add(series35);
-			this->chart1->Series->Add(series36);
+			series9->ChartArea = L"ChartArea1";
+			series9->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series9->Legend = L"Legend1";
+			series9->MarkerBorderWidth = 3;
+			series9->Name = L"Активность мозга";
+			series10->ChartArea = L"ChartArea1";
+			series10->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series10->Color = System::Drawing::Color::Red;
+			series10->Legend = L"Legend1";
+			series10->MarkerBorderWidth = 3;
+			series10->Name = L"Частота сердечных\nсокращений";
+			series11->ChartArea = L"ChartArea1";
+			series11->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series11->Color = System::Drawing::Color::Gold;
+			series11->Legend = L"Legend1";
+			series11->MarkerBorderWidth = 3;
+			series11->MarkerStep = 20;
+			series11->Name = L"Пульс";
+			series12->ChartArea = L"ChartArea1";
+			series12->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series12->Color = System::Drawing::Color::LimeGreen;
+			series12->LabelBorderColor = System::Drawing::Color::Transparent;
+			series12->LabelForeColor = System::Drawing::Color::MediumSeaGreen;
+			series12->Legend = L"Legend1";
+			series12->MarkerBorderWidth = 3;
+			series12->Name = L"Дыхание";
+			series12->YValuesPerPoint = 2;
+			this->chart1->Series->Add(series9);
+			this->chart1->Series->Add(series10);
+			this->chart1->Series->Add(series11);
+			this->chart1->Series->Add(series12);
 			this->chart1->Size = System::Drawing::Size(1146, 364);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -589,28 +641,56 @@ namespace LifeSystemProject {
 			// 
 			this->panel6->BackColor = System::Drawing::SystemColors::InactiveBorder;
 			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel6->Controls->Add(this->button2);
 			this->panel6->Controls->Add(this->button1);
 			this->panel6->Location = System::Drawing::Point(988, 458);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(194, 126);
 			this->panel6->TabIndex = 7;
 			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Honeydew;
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button2->Location = System::Drawing::Point(19, 10);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(151, 49);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"Включить подачу кислорода";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(36, 39);
+			this->button1->BackColor = System::Drawing::Color::LavenderBlush;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->Location = System::Drawing::Point(19, 65);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(115, 69);
+			this->button1->Size = System::Drawing::Size(151, 52);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Отлючить подачу кислорода";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label14->ForeColor = System::Drawing::Color::ForestGreen;
+			this->label14->Location = System::Drawing::Point(26, 611);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(609, 22);
+			this->label14->TabIndex = 8;
+			this->label14->Text = L"Система работает корректно. Показатели пациента в пределах нормы";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(1200, 615);
+			this->ClientSize = System::Drawing::Size(1200, 645);
+			this->Controls->Add(this->label14);
 			this->Controls->Add(this->panel6);
 			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->panel4);
@@ -640,6 +720,7 @@ namespace LifeSystemProject {
 			this->panel5->PerformLayout();
 			this->panel6->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -671,10 +752,10 @@ namespace LifeSystemProject {
 			timeNow = DateTime::Now; // Обновляем текущее время на каждом тик таймера
 			Random^ random = gcnew Random(timeNow.Millisecond);
 			Random^ randomSecond = gcnew Random();
-			double randomBrain = SimulateBrainActivity(random, PulseValue);
-			double randomCHSS = SimulateCHSS(random);
-			double randomPulse = SimulatePulse(random);
-			double randomBreath = SimulateBreath(random);
+			double randomBrain = SimulateBrainActivity(random, PulseValue, this);
+			double randomCHSS = SimulateCHSS(random, this);
+			double randomPulse = SimulatePulse(random, this);
+			double randomBreath = SimulateBreath(random, this);
 
 
 			// Проверяем состояние чекбокса перед добавлением данных
@@ -741,32 +822,36 @@ namespace LifeSystemProject {
 		}
 			  
 		private:
-			static double SimulateBrainActivity(Random^ random, double val)
+			static double SimulateBrainActivity(Random^ random, double val, MyForm^ form)
 			{
 				if (buttonOxygControl != true) {
 					double baseBrainActivity = random->Next(8, 12);
 					double noise = random->NextDouble() * 10 - 5;
 					BrainActivity = baseBrainActivity + noise;
+					form->label15->Text = System::Math::Round(BrainActivity, 2).ToString();
 					return BrainActivity;
 				}
 				else if (buttonOxygControl == true)
 				{
 					if (val > 20) {
 						BrainActivity += 1;
+						form->label15->Text = System::Math::Round(BrainActivity, 2).ToString();
 						return BrainActivity;
 					}
 					else if(val < 20){
+						form->label15->Text = System::Math::Round(BrainActivity, 2).ToString();
 						BrainActivity = val;
 						return BrainActivity;
 					}
-				}
+				} 
 			}
-			static double SimulatePulse(Random^ random)
+			static double SimulatePulse(Random^ random, MyForm^ form)
 			{
 				if (buttonOxygControl != true) {
 					double basePulse = random->Next(60, 80);
 					double noise = random->NextDouble() * 10 - 5;
 					PulseValue = basePulse + noise;
+					form->label16->Text = System::Math::Round(PulseValue, 2).ToString();
 					return PulseValue;
 				}
 				else if (buttonOxygControl == true)
@@ -775,22 +860,26 @@ namespace LifeSystemProject {
 						int min = PulseValue - 1;
 						double basePulse = random->Next(min, PulseValue);
 						PulseValue = basePulse;
+						form->label16->Text = System::Math::Round(PulseValue, 2).ToString();
 						PulseValue -= 0.5;
 						return PulseValue;
 					}
 					else if (PulseValue < 20) {
+						PulseValue = 0;
+						form->label16->Text = System::Math::Round(PulseValue, 2).ToString();
 						return 0;
 					}
 
 				}
 			}
 
-			static double SimulateCHSS(Random^ random)
+			static double SimulateCHSS(Random^ random, MyForm^ form)
 			{
 				if (buttonOxygControl != true) {
 					double baseCHSS = random->Next(80, 90);
 					double noise = random->NextDouble() * 15 - 5;
 					ChssValue = baseCHSS + noise;
+					form->label17->Text = System::Math::Round(ChssValue, 2).ToString();
 					return ChssValue;
 				}
 				else if (buttonOxygControl == true)
@@ -800,24 +889,29 @@ namespace LifeSystemProject {
 						double baseCHSS = random->Next(min, ChssValue);
 						double noise = random->NextDouble() * 2 - 1;
 						ChssValue = baseCHSS + noise;
+						form->label17->Text = System::Math::Round(ChssValue, 2).ToString();
 						ChssValue -= 3;
 						return ChssValue;
 					}
 					else if (ChssValue <= 0) {
+						ChssValue = 0;
+						form->label17->Text = System::Math::Round(ChssValue, 2).ToString();
 						return 0;
 					}
 
 				}
 			}
-			static double SimulateBreath(Random^ random)
+			static double SimulateBreath(Random^ random, MyForm^ form)
 			{
 				if (buttonOxygControl != true) {
 					double baseBreath = random->Next(25, 40);
 					double noise = random->NextDouble() * 10 - 5;
+					form->label18->Text = System::Math::Round((baseBreath + noise), 2).ToString();
 					return baseBreath + noise;
 				}
 				else if (buttonOxygControl == true)
 				{
+					form->label18->Text = "0";
 					return 0;
 
 				}
@@ -951,6 +1045,17 @@ namespace LifeSystemProject {
 
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 			buttonOxygControl = true;
+			if (buttonOxygControl == true) {
+				this->label14->ForeColor = Color::Crimson;
+				this->label14->Text = "СИСТЕМА ПОДАЧИ КИСЛОРОДА ОТКЛЮЧЕНА! ВКЛЮЧИТЕ ПОДАЧУ КИСЛОРОДА";
+			}
+		}
+		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+			buttonOxygControl = false;
+			if (buttonOxygControl == false) {
+				this->label14->ForeColor = Color::ForestGreen;
+				this->label14->Text = "Система работает корректно. Показатели пациента в пределах нормы";
+			}
 		}
 };
 }

@@ -1,3 +1,47 @@
 ﻿  MyForm.cpp
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(775,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(776,44): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(799,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(800,43): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(839,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(840,48): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(863,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(864,44): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(888,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(889,44): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(912,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(913,44): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(763,1): warning C4715: LifeSystemProject::MyForm::SimulateBrainActivity: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(786,1): warning C4715: LifeSystemProject::MyForm::SimulatePulse: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(811,1): warning C4715: LifeSystemProject::MyForm::SimulateCHSS: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(824,1): warning C4715: LifeSystemProject::MyForm::SimulateBreath: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(851,1): warning C4715: LifeSystemProject::MyForm::SimulateO2Level: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(876,1): warning C4715: LifeSystemProject::MyForm::SimulateCO2Level: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(900,1): warning C4715: LifeSystemProject::MyForm::SimulateSys: значение возвращается не при всех путях выполнения
+C:\Users\aliya\source\repos\LifeSystemProject\LifeSystemProject\MyForm.h(926,1): warning C4715: LifeSystemProject::MyForm::SimulateDia: значение возвращается не при всех путях выполнения
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   LifeSystemProject.vcxproj -> C:\Users\aliya\source\repos\LifeSystemProject\x64\Debug\LifeSystemProject.exe

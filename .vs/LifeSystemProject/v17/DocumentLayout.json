@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{47C14CBE-8227-4133-B3EF-64049113D2AA}|LifeSystemProject\\LifeSystemProject.vcxproj|solutionrelative:LifeSystemProject\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47C14CBE-8227-4133-B3EF-64049113D2AA}|LifeSystemProject\\LifeSystemProject.vcxproj|C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{47C14CBE-8227-4133-B3EF-64049113D2AA}|LifeSystemProject\\LifeSystemProject.vcxproj|solutionrelative:LifeSystemProject\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47C14CBE-8227-4133-B3EF-64049113D2AA}|LifeSystemProject\\LifeSystemProject.vcxproj|C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{47C14CBE-8227-4133-B3EF-64049113D2AA}|LifeSystemProject\\LifeSystemProject.vcxproj|solutionrelative:LifeSystemProject\\MyForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.h",
               "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h",
               "RelativeToolTip": "LifeSystemProject\\MyForm.h",
-              "ViewState": "AgIAAHkDAAAAAAAAAAAkwJMDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsDAAAAAAAAAAAAAE0DAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-19T17:49:31.354Z",
               "IsPinned": true,
@@ -49,18 +45,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h",
-              "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.h",
-              "ToolTip": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LifeSystemProject\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-24T17:31:27.294Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MyForm.cpp",
               "DocumentMoniker": "C:\\Users\\aliya\\source\\repos\\LifeSystemProject\\LifeSystemProject\\MyForm.cpp",
               "RelativeDocumentMoniker": "LifeSystemProject\\MyForm.cpp",
@@ -68,8 +52,7 @@
               "RelativeToolTip": "LifeSystemProject\\MyForm.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-19T17:29:09.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T17:29:09.536Z"
             }
           ]
         }
